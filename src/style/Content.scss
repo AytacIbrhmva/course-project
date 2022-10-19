@@ -1,0 +1,690 @@
+@import './variable';
+
+.content {
+    margin-left: 280px;
+    .row {    
+        display: flex;
+        justify-content: space-between;
+        .col {
+            // USER
+            .user {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 330px;    
+                padding: 20px;
+                border: 1px solid rgb(226, 222, 222);
+                border-radius: 20px;
+                  // user profile   
+                  .user-profile {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      background-color: $bg-secondary;
+                      padding: 10px;
+                      border-radius: 12px;
+                      margin-bottom: 20px;
+                      .left {
+                          display: flex;
+                          align-items: center;
+                          .avatar {
+                            width: 30px;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                          }
+                          .name {
+                              font-size: 14px;
+                              color: #000;
+                              font-weight: bold;
+                              .status {
+                                  font-size: 12px;
+                                  color: $text-secondary;
+                              }
+                          }
+                      }
+                      .right {                            
+                          .btn {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              padding: 4px 5px;
+                              border-radius: 10px;
+                              background-color: rgb(175, 175, 175);
+                              border: none;
+                              .icon {
+                                background-color: #fff;
+                                color: #000;
+                                padding: 2px 6px;
+                                border-radius: 50%;
+                                font-size: 20px;
+                                font-weight: bolder;
+                                cursor: pointer;
+                                transition: 0.1s;
+                                &:hover {
+                                    transform: scale(1.1);
+                                }
+                            }
+                          }
+                      }
+                  }
+
+                  // about user
+                  .about-user {
+                    // about user header
+                    .about-user-header {
+                      display: flex;
+                      flex-direction: column;
+                      .title {
+                          color: #000;
+                          font-size: 14px;
+                          padding-bottom: 15px;
+                          margin-bottom: 15px;
+                          position: relative;
+                          z-index: -1;
+                          &::after {
+                              content: '';
+                              position: absolute;
+                              left: 0;
+                              bottom: 0;
+                              width: 100%;
+                              height: 1px;
+                              background-color: rgb(237, 237, 237);
+                          }
+                      }
+                      .description {
+                          color: $text-secondary;
+                          font-size: 12px;
+                          margin-bottom: 15px;
+                      }
+                      .more {
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                          color: $text-secondary;
+                          font-size: 12px;
+                          .icon {
+                              color: #000;
+                              font-size: 16px;
+                          }
+                      }
+                    }  
+
+                    //achievements
+                    .achievements {
+                      margin-bottom: 90px;
+                      .achievements-header {
+                          display: flex;
+                          align-items: center;
+                          justify-content: space-between;
+                          margin-bottom: 10px;
+                          .title {
+                              color: #000;
+                              font-size: 14px;
+                              .text-secondary {
+                                  color: $text-secondary;
+                              }
+                          }
+                          .dots {
+                              color: $text-secondary;
+                              font-size: 16px;
+                          }
+                      }
+                      // cards
+                      .cards {
+                          display: flex;
+                          justify-content: space-between;
+                          .card {
+                              display: flex;
+                              flex-direction: column;
+                              align-items: center;
+                              background-color: $lighter-gray;
+                              padding: 5px 20px;
+                              border-radius: 10px;
+                              width: 80px;
+                              .icon {
+                                  font-size: 20px;
+                                  margin-bottom: 3px;
+                              }
+                              .text-warning {
+                                  color: rgb(255, 234, 3);
+                              }
+                              .text-dark {
+                                  color: $text-secondary;
+                              }
+                              .text-primary {
+                                  color: rgb(77, 82, 231);
+                              }
+                              label {
+                                  color: #000;
+                                  font-size: 12px;
+                                  font-weight: bold;
+                                  margin-bottom: 3px;
+                              }
+                              p {
+                                  color: $text-secondary;
+                                  font-size: 11px;
+                                  font-weight: bold;
+                              }
+                          }
+                      }
+                    }
+
+                    // materials
+                    .materials {
+                      display: flex;
+                      flex-direction: column;
+                      .materials-header {
+                          display: flex;
+                          align-items: center;
+                          justify-content: space-between;
+                          margin-bottom: 10px;
+                          .title {
+                              color: #000;
+                              font-size: 14px;
+                              .text-secondary {
+                                  color: $text-secondary;
+                              }
+                          }
+                          .duration {
+                              display: flex;
+                              align-items: center;
+                              color: $text-secondary;
+                              font-size: 12px;
+                              border: 1px solid rgb(138, 138, 138);
+                              padding: 5px;
+                              border-radius: 5px;
+                              .icon {
+                                  color: rgb(225, 32, 148);
+                                  margin-right: 5px;
+                              }
+                          }
+                      }
+                      // cards
+                      .cards {
+                          .card {
+                              display: flex;
+                              align-items: center;
+                              justify-content: space-between;
+                              padding: 7px;
+                              height: 40px;
+                              border-radius: 10px;
+                              margin-bottom: 15px;
+                              
+                              &:last-child {
+                                  margin-bottom: 0;
+                              }
+                              label {
+                                color: #000;
+                                font-size: 10px;
+                                font-weight: bold;
+                                .count {
+                                    font-size: 10px;
+                                    color: #fff;
+                                    padding: 5px 8px;
+                                    border-radius: 5px;
+                                    margin-right: 10px;
+                                }
+                                .btn-success {
+                                    background-color: rgb(93, 177, 93);
+                                }
+                                .btn-danger {
+                                    background-color: rgb(245, 108, 54);
+                                }
+                                .btn-dark {
+                                    background-color: rgb(90, 90, 90);
+                                }
+                              }
+                              .btn {                        
+                                  border: none;
+                                  background-color: transparent;
+                                  .icon {
+                                    cursor: pointer;
+                                    color: #000;
+                                    font-size: 20px;
+                                    background-color: #fff;
+                                    padding: 5px;
+                                    border-radius: 50%;
+                                    transition: 0.1s;
+                                    &:hover {
+                                      transform: scale(1.1);
+                                    }
+                                  }
+                              }
+                          }
+                          .bg-success {
+                              background-color: rgb(213, 244, 205);
+                          }
+                          .bg-danger {
+                              background-color: rgb(249, 227, 211);
+                          }
+                          .bg-light {
+                              background-color: rgb(220, 219, 219);
+                          }
+ 
+                      }
+                    }
+                  }         
+            }
+            // RIGHT SIDE
+            .right-side {
+                .right-header-img {
+                    width: 680px;
+                  }
+                  .row {
+                    display: flex;
+                    justify-content: end;
+    
+                    // online chat
+                    .online-chat {
+                      width: 300px;
+                      .online-chat-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+                        .title {
+                          font-size: 14px;
+                          color: #000;
+                          .text-secondary {
+                            color: $text-secondary;
+                          }
+                        }
+                        .full-screen-icon {
+                          color: #000;
+                          font-size: 25px;
+                          padding: 5px;
+                          border-radius: 5px;
+                          background-color: $bg-secondary;
+                          &:hover {
+                            transform: scale(1.1);
+                          }
+                        }
+                      }
+                      .chat-body {
+                        background-color: $bg-secondary;
+                        padding: 20px 10px 10px 10px;
+                        border-radius: 10px;
+                        .chatting {
+                        // receiver
+                          .receiver {
+                            display: flex;
+                            align-items: flex-end;
+                            text-align: start;
+                            margin-bottom: 20px;
+                            .avatar {
+                              width: 25px;
+                              height: 25px;
+                              margin-right: 10px;
+                            }
+                            .messages {
+                              display: flex;
+                              flex-direction: column;
+                              .message {
+                                margin-bottom: 10px;
+                                &:last-child {
+                                  margin-bottom: 0;
+                                }
+                                p {
+                                  display: inline;
+                                  padding: 5px;
+                                  color: #000;
+                                  background-color: #fff;
+                                  border-radius: 10px;
+                                  font-size: 12px;
+                                }
+                              }
+                            }
+                          }
+                        //   sender
+                          .sender {           
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: flex-end;
+                            text-align: end;
+                            margin-bottom: 20px;
+                            .messages {
+                              display: flex;
+                              flex-direction: column;
+                              .message {
+                                margin-bottom: 10px;
+                                &:last-child {
+                                  margin-bottom: 0;
+                                }
+                                p {
+                                  display: inline;
+                                  padding: 5px;
+                                  color: #fff;
+                                  background-color: rgb(56, 56, 56);
+                                  border-radius: 10px;
+                                  font-size: 12px;
+                                }
+                              }
+                            }
+                          }
+                        }
+                        .chat-input {
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+                          position: relative;
+                          input {
+                            width: 100%;
+                            border: none;
+                            padding: 8px;
+                            border-radius: 5px;
+                            color: #000;
+                            font-size: 12px;
+                            background-color: #fff;
+                            &:focus {
+                              outline: 1px solid rgb(199, 199, 199);
+                            }
+                            &::placeholder {
+                              font-size: 12px;
+                              color: #000;
+                            }
+                          }
+                          .send-icon {
+                            cursor: pointer;
+                            position: absolute;
+                            margin-left: 93%;
+                            color: rgb(233, 118, 76);
+                          }
+                        }
+                      }
+                    }
+    
+                    // users
+                    .users {
+                      margin-left: 60px;
+                      width: 230px;
+                      .users-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+                        .title {
+                          color: #000;
+                          font-size: 14px;
+                        }
+                        .online-people-count {
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+                          background-color: rgb(245, 108, 54);
+                          width: 80px;
+                          padding: 7px 5px 7px 7px;
+                          border-radius: 5px;
+                          label {
+                            color: #fff;
+                            font-size: 14px;
+                          }
+                          .eye-icon {
+                            color: #fff;
+                            font-size: 14px;
+                          }
+                          .count {
+                            color: #fff;
+                            font-size: 14px;
+                          }
+                        }
+                      }
+                      .cards {
+                        .card { 
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+                          background-color: $bg-secondary;
+                          padding: 10px;
+                          border-radius: 15px;
+                          margin-bottom: 15px;
+                          &:last-child {
+                            margin-bottom: 0;
+                          }                  
+                          // left
+                          .left {
+                            display: flex;
+                            .card-img {
+                              width: 30px;
+                              height: 30px;
+                              border-radius: 50%;
+                              margin-right: 5px;
+                            }
+                            .username {
+                              h3 {
+                                font-size: 14px;
+                                color: #000;
+                              }
+                              p {
+                                font-size: 12px;
+                                color: $text-secondary;
+                              }
+                            }
+                          }
+                          // right
+                          .right {
+                            .btn {
+                              border: none;
+                              background-color: transparent;
+                              .icon {
+                                cursor: pointer;
+                                color: #000;
+                                font-size: 20px;
+                                background-color: #fff;
+                                padding: 5px;
+                                border-radius: 50%;
+                                transition: 0.1s;
+                                &:hover {
+                                  transform: scale(1.1);
+                                }
+                              }
+                            }
+                          }                          
+                        }
+                      }
+                    }
+                  }
+            }
+
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .col {
+        width: 100%;
+        // user left side
+        .user {
+          width: 100%;
+          // user profile
+          .user-profile {
+            margin-left: 20px;
+            // left
+            .left {
+              .avatar {
+                width: 50px;
+              }
+              .name {
+                font-size: 16px;
+                .status {
+                  font-size: 14px;
+                }
+              }
+            }
+            // right
+            .right {
+              .btn {
+                .icon {
+                  font-size: 25px;
+                }
+              }
+            }
+          }
+          // about user
+          .about-user {
+
+            // about user header
+            .about-user-header{
+              .title {
+                font-size: 16px;
+              }
+              .description {
+                font-size: 14px;
+              }
+              .more {
+                font-size: 14px;
+                .icon {
+                  font-size: 18px;
+                }
+              }
+            }
+
+            // achievements
+            .achievements {
+              // header
+              .achievements-header {
+                .title {
+                  font-size: 16px;
+                }
+                .dots {
+                  font-size: 18px;
+                }
+              }
+              // cards
+              .cards {
+                .card {
+                  width: 100px;
+                  .icon {
+                    font-size: 30px;
+                  }
+                  label {
+                    font-size: 16px;
+                  }
+                  p {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+
+            // materials
+            .materials {
+              // header
+              .materials-header {
+                .title {
+                  font-size: 16px;
+                }
+                .duration {
+                  font-size: 14px;
+                }
+              }
+              // cards
+              .cards {
+                .card {
+                  label {
+                    font-size: 15px;
+                    .count {
+                      font-size: 13px;
+                    }
+                  }
+                  .btn {
+                    .icon {
+                      font-size: 25px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        // right side
+        .right-side {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 30px;
+          .right-header-img {
+            width: 100%;
+            margin-bottom: 30px;
+          }
+          .row {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
+            // online chat
+            .online-chat {
+              width: 100%;
+              .online-chat-header {
+                .title {
+                  font-size: 16px;
+                }
+                .full-screen-icon {
+                  font-size: 28px;
+                }
+              }
+            }
+            // users
+            .users {
+              width: 100%;
+              margin-left: 0;
+              margin-bottom: 30px;
+              .users-header {
+                .title {
+                  color: #000;
+                  font-size: 16px;
+                }
+                .online-people-count {
+                  width: 100px;
+                  label {
+                    font-size: 16px;
+                  }
+                  .eye-icon {
+                    font-size: 16px;
+                  }
+                  .count {
+                    font-size: 16px;
+                  }
+                }
+              }
+              .cards {
+                .card {
+                  display: flex;
+                  justify-content: space-between;
+                  // left
+                  .left {
+                    .card-img {
+                      width: 35px;
+                      height: 35px;
+                    }
+                    .username {
+                      h3 {
+                        font-size: 14px;
+                      }
+                      p {
+                        font-size: 14px;
+                      }
+                    }
+                  }            
+                  // right
+                  .right {
+                    .btn {
+                      .icon {
+                        font-size: 25px;
+                      }
+                    }
+                  } 
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
